@@ -1,0 +1,19 @@
+Name: Make upper case
+Description: Converts text into upper case
+Binding: upperCaseAddin
+Interactive: false
+
+Name: Make lower case
+Description: Converts text into lower case
+Binding: lowerCaseAddin
+Interactive: false
+
+Name: Make snake case
+Description: Converts text into snake case
+Binding: snakeCaseAddin
+Interactive: false
+
+Name: Make camel case
+Description: Converts text into lower camel case
+Binding: camelCaseAddin
+Interactive: false
