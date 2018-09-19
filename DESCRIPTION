@@ -1,0 +1,13 @@
+Package: caseconverter
+Version: 0.0.1.9000
+Title: RStudio Addin to convert text cases
+Description: An RStudio Addin to convert text cases to lower, upper, snake, and camel cases.
+Authors@R: person("Metin", "Yazici", email = "name@example.com", role = c("aut", "cre"))
+License: file LICENSE
+Imports: 
+    rstudioapi,
+    snakecase
+LazyData: true
+ByteCompile: true
+Encoding: UTF-8
+RoxygenNote: 6.0.1
