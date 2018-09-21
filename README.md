@@ -7,6 +7,7 @@ An RStudio Addin to convert text cases to lower, upper, snake, and camel cases.
 ## Installation
 
 ```
+# install.packages("devtools")
 devtools::install_github("strboul/caseconverter")
 ```
 

@@ -41,15 +41,24 @@ camelCaseAddin <- function() {
   .case_call("camel_case")
 }
 
-#' @importFrom rstudioapi getActiveDocumentContext modifyRange documentSave
+#' @importFrom rstudioapi getActiveDocumentContext modifyRange document_position
+#'   documentSave
 .case_call <- function(name) {
   call <- eval(parse(text = name))
   context <- rstudioapi::getActiveDocumentContext()
 
-  for (con in context$selection) {
-    rstudioapi::modifyRange(location = con$range,
-                            text = call(con$text),
-                            id = context$id)
+  for (con in context[["selection"]]) {
+    if (!con[["text"]] == '') {
+      rstudioapi::modifyRange(location = con[["range"]],
+                              text = call(con[["text"]]),
+                              id = context[["id"]])
+    } else {
+      rsrow <- con[["range"]][["start"]][["row"]]
+      pos <- rstudioapi::document_position(c(rsrow, 1L), c(rsrow, Inf))
+      rstudioapi::modifyRange(location = pos,
+                              text = call(context[["contents"]][[rsrow]]),
+                              id = context[["id"]])
+    }
   }
   if (!context$path == '') {
     rstudioapi::documentSave(context$id)
