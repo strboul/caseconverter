@@ -1,22 +1,34 @@
 
 ### WRAPPERS:
 
+#' Convert to upper case
+#'
+#' @param x character.
 #' @export
 upper_case <- function(x) {
   toupper(x)
 }
 
+#' Convert to lower case
+#'
+#' @param x character.
 #' @export
 lower_case <- function(x) {
   tolower(x)
 }
 
+#' Convert to snake case
+#'
+#' @param x character.
 #' @importFrom snakecase to_snake_case
 #' @export
 snake_case <- function(x) {
   snakecase::to_snake_case(x)
 }
 
+#' Convert to camel case
+#'
+#' @param x character.
 #' @importFrom snakecase to_lower_camel_case
 #' @export
 camel_case <- function(x) {
