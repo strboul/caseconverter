@@ -13,7 +13,7 @@ devtools::install_github("strboul/caseconverter")
 ```
 
 ## Reasoning
-I often find myself to have a interactive way to change the case of a selected text in a document.
+I often find myself to have a comfortable (and interactive) way to convert the case of selected text in a file when working in the RStudio environment.
 
 ## See also
 + [snakecase](https://github.com/Tazinho/snakecase) package used for camel and snake case changes.
